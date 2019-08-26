@@ -26,7 +26,12 @@ docker-compose up -d
 
 * View Result
 
+UI:
 open  http://localhost:7000
+
+api proxy:
+
+http://localhost:7000/dashboard/podium-resource/userlogin/api
 
 ## Some images
 

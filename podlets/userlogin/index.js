@@ -6,12 +6,17 @@ const podlet = new Podlet({
     name: 'userlogin', // required
     version: '1.0.0', // required
     pathname: '/userlogin', // required
-    manifest: '/manifest.json', // optional, defaults to '/manifest.json'
     development: true, // optional, defaults to false
 });
 
-
+podlet.proxy({ target: '/api', name: 'api' });
 app.use(podlet.middleware());
+
+app.get('/api', (req, res) => {
+    res.json([{ name: 'fluffy' }]);
+});
+podlet.js({ value: 'https://passport.baidu.com/static/passpc-base/js/dv/g.min.js' });
+podlet.css({ value: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' });
 
 app.get(podlet.content(), (req, res) => {
     res.status(200).podiumSend(`

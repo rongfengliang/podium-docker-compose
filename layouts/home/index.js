@@ -5,7 +5,7 @@ const app = express();
 
 const layout = new Layout({
     name: 'dashboard', // required
-    pathname: '/', // required
+    pathname: '/dashboard', // required
 });
 const index = layout.client.register({
     name: 'index', // required
