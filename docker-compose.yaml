@@ -1,0 +1,20 @@
+version: '3'
+services:
+  layout:
+     build:
+       context: layouts/home
+       dockerfile: Dockerfile
+     ports:
+     - "7000:7000"
+  layout-index:
+     build:
+       context: podlets/indexpage
+       dockerfile: Dockerfile
+     ports:
+     - "7100:7100"
+  layout-userlogin:
+     build:
+       context: podlets/userlogin
+       dockerfile: Dockerfile
+     ports:
+     - "7101:7101"
