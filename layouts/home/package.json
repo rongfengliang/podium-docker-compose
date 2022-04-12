@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@podium/layout": "^4.2.0",
+    "@podium/layout": "^4.6.110",
     "express": "^4.17.1"
   },
   "scripts": {
